@@ -348,4 +348,34 @@ let p = new Princ("Petya", 27, 37.8)
 p.lookingFor(cinArr)
 console.log(p)
 
+console.log("==================================Practice================================")
+
+// попрацювати з наслідуванням (inherit / extends)
+
+class People{
+    constructor(name, age){
+        this.name = name
+        this.age = age
+    }
+}
+
+class Soldier extends People{
+    constructor(name, age, rank){
+        super(name, age)
+        this.rank = rank
+    }
+}
+
+class Developer extends People{
+    constructor(name, age, skills){
+        super(name, age)
+        this.skills = skills
+    }
+}
+
+let person1 = new Soldier("Payne", 33, "major")
+console.log(person1)
+let person2 = new Developer("Ostap", 20, "HTML/CSS, JS")
+console.log(person2)
+
 console.log("==========================================================================")
