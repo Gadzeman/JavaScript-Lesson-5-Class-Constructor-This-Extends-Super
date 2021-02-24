@@ -379,3 +379,24 @@ let person2 = new Developer("Ostap", 20, "HTML/CSS, JS")
 console.log(person2)
 
 console.log("==========================================================================")
+
+function mario(n){
+
+    let gapStar=[];
+
+    for(let i=0; i<n-1; i++){
+        let b=' ';
+        let a='*';
+        gapStar.push(b);
+        if(gapStar.length===n){
+
+            gapStar.push(a);
+        }
+    }
+    for(let i=1; i<=n; i++){
+        gapStar.splice(n-i, 1, '*');
+        console.log(...gapStar);
+    }
+
+}
+mario(5);
